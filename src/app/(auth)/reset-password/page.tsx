@@ -1,0 +1,28 @@
+import Image from 'next/image'
+import React from 'react'
+import logo from "@/assets/images/logo.png"
+import Heading from '@/shared/Heading'
+import FormGreenSide from '@/features/auth/components/FormGreenSide'
+import formImage from "@/assets/images/lock-screen.png"
+import FormWrapper from '@/features/auth/components/FormWrapper'
+import ForgotForm from '@/features/auth/components/ForgotForm'
+const page = () => {
+
+    return (
+        <div className='flex justify-between xl:p-6 p-3 ps-0 items-center'>
+            <FormWrapper>
+                <Image src={logo} alt='logo' width={114} height={67} />
+                <div>
+                    <div className='xl:pt-[70px] lg:pt-[50px] pt-[30px] font-montserrat'>
+                        <Heading label='Forgot your Password?' className='mb-4' />
+                        <div className='text-gray-500 mt-4'>Enter the email addresses associated with your account </div>
+                    </div>
+                    <ForgotForm />
+                </div>
+            </FormWrapper>
+            <FormGreenSide image={formImage} imageStyle={{ backgroundSize: "70%" }} />
+        </div>
+    )
+}
+
+export default page

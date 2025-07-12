@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.conical-image {
+    background-position: bottom;
+}
+
+body button[data-selected=true] span {
+    @apply !bg-green-1000 font-montserrat
+}
+
+div button div {
+    @apply text-base font-montserrat !text-green-1000
+}
+
+body button[data-selected=true] div {
+    @apply !text-white text-base
+}
+
+div[role="tabpanel"] {
+    @apply hidden
+}
+
+@media(min-width:768px) {
+    .conical-image {
+        background-size: 100%;
+    }
+}
+
+@media(min-width:1200px) {
+    .conical-image {
+        background-size: 55%;
+    }
+}

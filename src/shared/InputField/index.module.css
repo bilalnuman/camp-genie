@@ -1,0 +1,95 @@
+.container {
+    position: relative;
+
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container .input {
+    width: 100%;
+    border: 1px solid #DCDCDC;
+    border-radius: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.input:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.15rem rgba(0, 123, 255, 0.187);
+    border-color: transparent !important;
+}
+
+.input::placeholder {
+    color: #ccc;
+    font-size: 14px;
+    top: -2px;
+    position: relative;
+}
+
+.input.error {
+    border-color: #dc2626;
+}
+
+.floatLabel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 300ms ease-in-out;
+}
+
+
+label.focusd {
+    top: -14px;
+    left: 5px;
+    transform: scale(0.8);
+    color: #9ca2b0;
+    position: absolute;
+    background: #fff;
+    transition: all 300ms ease-in-out;
+    z-index: 1;
+}
+
+.label {
+    font-weight: 500;
+    color: #202020;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.passwordToggle {
+    position: absolute;
+    right:10px;
+    top: calc(50% - 1rem);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.iconContainer {
+    position: absolute;
+    color: #ccc;
+    font-size: 20px;
+}
+
+.star {
+    color: #dc2626;
+    font-size: 14px;
+    top: -3px;
+    padding-left: 2px;
+}
+
+p.error {
+    font-size: 13px;
+    color: #dc2626;
+}
