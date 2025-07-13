@@ -22,6 +22,25 @@ div[role="tabpanel"] {
     @apply hidden
 }
 
+.camp-type-radio span,
+.camp-checkboxes label span::before {
+    @apply border-orange-1000
+}
+
+.camp-checkboxes label span:nth-child(2)::before,
+.camp-type-radio span:nth-child(2){
+    @apply border-1
+}
+
+.camp-checkboxes label span::after, .camp-checkboxes label span,
+.camp-checkboxes label span::before {
+    @apply !rounded
+}
+
+.camp-type-radio div span {
+    @apply text-gray-300 text-sm
+}
+
 @media(min-width:768px) {
     .conical-image {
         background-size: 100%;

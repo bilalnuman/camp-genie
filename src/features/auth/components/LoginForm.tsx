@@ -1,7 +1,7 @@
 "use client"
 import { Controller } from "react-hook-form";
 import { useSignIn } from "../hooks";
-import FormInput from "@/shared/InputField";
+import InputField from "@/shared/InputField";
 import Link from "next/link";
 import { Checkbox } from "@heroui/checkbox";
 import FormButton from "./FormButton";
@@ -16,7 +16,7 @@ const LoginForm = () => {
                     control={control}
                     defaultValue=""
                     render={({ field, fieldState }) => (
-                        <FormInput
+                        <InputField
                             {...field}
                             placeholder="Email"
                             label="Email"
@@ -31,7 +31,7 @@ const LoginForm = () => {
                     control={control}
                     defaultValue=""
                     render={({ field, fieldState }) => (
-                        <FormInput
+                        <InputField
                             {...field}
                             placeholder="Password"
                             error={fieldState?.error?.message}

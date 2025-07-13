@@ -1,6 +1,7 @@
+"use client"
 import React, { useState } from 'react';
 import styles from "./index.module.css";
-interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label?: string;
     error?: string;
     containerClass?: string;
@@ -24,7 +25,7 @@ interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 
-const FormInput: React.FC<FormInputProps> = ({
+const InputField: React.FC<InputFieldProps> = ({
     label,
     error,
     containerClass = '',
@@ -66,7 +67,7 @@ const FormInput: React.FC<FormInputProps> = ({
             {label && (
                 <label htmlFor={label} className={`${labelStyle} ${floatLabel ? floatClass : labelClass}`}>
                     {label}
-                    <sup className={`${styles.star} ${starClass}`}>*</sup>
+                    {required && <sup className={`${styles.star} ${starClass}`}>*</sup>}
                 </label>
             )}
 
@@ -116,4 +117,4 @@ const FormInput: React.FC<FormInputProps> = ({
     );
 };
 
-export default FormInput;
+export default InputField;

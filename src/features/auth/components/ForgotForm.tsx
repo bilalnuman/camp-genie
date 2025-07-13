@@ -1,6 +1,6 @@
 "use client"
 import { Controller } from "react-hook-form";
-import FormInput from "@/shared/InputField";
+import InputField from "@/shared/InputField";
 import FormButton from "./FormButton";
 import { useForgotPassword } from "../hooks";
 import { Button } from "@heroui/react";
@@ -18,7 +18,7 @@ const ForgotForm = () => {
           control={control}
           defaultValue=""
           render={({ field, fieldState }) => (
-            <FormInput
+            <InputField
               {...field}
               error={fieldState?.error?.message}
               label="Email"

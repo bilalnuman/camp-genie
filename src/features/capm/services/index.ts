@@ -1,0 +1,11 @@
+import apiClient from "../../../lib/axios";
+import { URLS } from "../../../lib/constants";
+
+export const login = (payload: any) =>
+    apiClient.post(URLS.LOGIN, payload);
+
+export const signup = (payload: any) =>
+    apiClient.post(URLS.REGISTER, payload);
+
+export const me = () =>
+    apiClient.get(URLS.ME);

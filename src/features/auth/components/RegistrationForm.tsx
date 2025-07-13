@@ -1,6 +1,6 @@
 "use client"
 import { Controller } from "react-hook-form";
-import FormInput from "@/shared/InputField";
+import InputField from "@/shared/InputField";
 import Icon from "@/shared/Icon";
 import { useSignUp } from "../hooks";
 import FormButton from "./FormButton";
@@ -15,7 +15,7 @@ const RegistrationForm = (registerType: any) => {
                     control={control}
                     defaultValue=""
                     render={({ field, fieldState }) => (
-                        <FormInput
+                        <InputField
                             {...field}
                             error={fieldState?.error?.message}
                             label="Camp Name"
@@ -27,7 +27,7 @@ const RegistrationForm = (registerType: any) => {
                     control={control}
                     defaultValue=""
                     render={({ field, fieldState }) => (
-                        <FormInput
+                        <InputField
                             {...field}
                             error={fieldState?.error?.message}
                             label="Name"
@@ -39,7 +39,7 @@ const RegistrationForm = (registerType: any) => {
                     control={control}
                     defaultValue=""
                     render={({ field, fieldState }) => (
-                        <FormInput
+                        <InputField
                             {...field}
                             error={fieldState?.error?.message}
                             secureTextEntry

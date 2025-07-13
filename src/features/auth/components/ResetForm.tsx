@@ -1,7 +1,7 @@
 "use client"
 import { Controller } from "react-hook-form";
 import { usePasswordValidater, useResetPassword } from "../hooks";
-import FormInput from "@/shared/InputField";
+import InputField from "@/shared/InputField";
 import FormButton from "./FormButton";
 
 const ResetForm = () => {
@@ -16,7 +16,7 @@ const ResetForm = () => {
           control={control}
           defaultValue=""
           render={({ field, fieldState }) => (
-            <FormInput
+            <InputField
               {...field}
               error={fieldState?.error?.message}
               secureTextEntry
@@ -30,7 +30,7 @@ const ResetForm = () => {
           control={control}
           defaultValue=""
           render={({ field }) => (
-            <FormInput
+            <InputField
               {...field}
               error={confirmPasswrd}
               secureTextEntry
