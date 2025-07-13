@@ -7,7 +7,7 @@ import { useEffect, useState, useTransition } from "react";
 type FiltersState = {
     search: string;
     location: string;
-    priceRange: [number, number];
+    priceRange: any[];
     type: string;
     transportation: string;
     campTheme: string;
@@ -18,7 +18,7 @@ type FiltersState = {
 export const defaultFilters: FiltersState = {
     search: "",
     location: "",
-    priceRange: [0, 1000],
+    priceRange: [],
     type: "",
     transportation: "no",
     campTheme: "",

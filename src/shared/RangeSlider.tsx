@@ -4,7 +4,7 @@ import React from "react";
 import { Slider } from "@heroui/react";
 import Icon from "./Icon";
 interface PropsTypes {
-    range: [number, number];
+range: [number, number];
     onChange?: (val: [number, number]) => void;
 
 }

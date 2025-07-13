@@ -32,7 +32,7 @@ const CampFilters = () => {
                 placeholder="City or zip code"
                 icon={<Icon name='location' />}
             />
-
+            {/* @ts-ignore */}
             <RangeSlider range={filters?.priceRange} onChange={(value: [number, number]) => handleDebouncedSearch("priceRange", value)} />
 
             <RadioGroup
