@@ -3,7 +3,7 @@ import { login, me, signup } from '../services';
 
 
 
-export const useGetCamps = (filters: any, options = {}) => {
+export const useGetCamps = (filters?: any, options = {}) => {
     return useQuery({
         queryKey: ["camps", filters],
         queryFn: () => me(), // replace with actual fetch

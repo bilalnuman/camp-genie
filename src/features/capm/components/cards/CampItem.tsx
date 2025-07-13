@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import img from "@/assets/images/img_1.png"
 import Icon from '@/shared/Icon'
 import OrangeButton from '@/shared/OrangeButton'
+import { useGetCamps } from '../../hooks/QueryHook';
+import { defaultFilters, useCampHook } from '../../hooks';
 const CampItem = () => {
+    const { filters } = useCampHook()
+
+    const isFiltersReady = useMemo(() => {
+        return filters !== defaultFilters;
+    }, [filters]);
+
+    const { data, isLoading } = useGetCamps(filters, {
+        enabled: isFiltersReady,
+    });
+
     return (
         <div className='flex-1 grid lg:grid-cols-2 sm:grid-cols-2 xl:gap-10 lg:gap-6 gap-5'>
             {Array.from({ length: 10 }).map((_, index) => (

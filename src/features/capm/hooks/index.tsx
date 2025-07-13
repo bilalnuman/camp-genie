@@ -15,7 +15,7 @@ type FiltersState = {
     days: string[];
 };
 
-const defaultFilters: FiltersState = {
+export const defaultFilters: FiltersState = {
     search: "",
     location: "",
     priceRange: [0, 1000],
