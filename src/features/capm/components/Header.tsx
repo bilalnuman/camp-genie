@@ -5,7 +5,7 @@ import logo from "@/assets/images/logo.png"
 import clsx from 'clsx'
 const Header = () => {
   return (
-    <header className='h-[70px] border-b flex items-center justify-between xl:ps-20 lg:px-14 md:px-6 sm:px-8 px-4'>
+    <header className='h-[70px] bg-white sticky top-0 z-20 flex items-center justify-between xl:ps-20 lg:px-14 md:px-6 sm:px-8 px-4'>
       <Link href="/">
         <Image src={logo.src} alt='lgo' width={80} height={50} />
       </Link>
