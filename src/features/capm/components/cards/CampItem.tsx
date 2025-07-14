@@ -1,9 +1,11 @@
 import React, { useMemo } from 'react'
 import img from "@/assets/images/img_1.png"
 import Icon from '@/shared/Icon'
-import OrangeButton from '@/shared/OrangeButton'
 import { useGetCamps } from '../../hooks/QueryHook';
 import { defaultFilters, useCampHook } from '../../hooks';
+import { LikeButton } from '@/shared/LikeButton';
+import TagLine from '@/shared/TagLine';
+import OrangeLinkButton from '@/shared/OrangeLinkButton';
 const CampItem = () => {
     const { filters } = useCampHook()
 
@@ -16,12 +18,16 @@ const CampItem = () => {
     });
 
     return (
-        <div className='flex-1 grid lg:grid-cols-2 sm:grid-cols-2 xl:gap-10 lg:gap-6 gap-5'>
-            {Array.from({ length: 10 }).map((_, index) => (
+        <div className='flex-1 grid lg:grid-cols-2 sm:grid-cols-2 xl:gap-10 lg:gap-6 gap-5 h-fit'>
+            {Array.from({ length: 1 }).map((_, index) => (
                 <div className="pb-4 overflow-hidden flex-1 rounded-xl bg-white" key={index}>
                     <div className='h-[230px] bg-cover bg-no-repeat'
                         style={{ backgroundImage: `url(${img.src})` }}
                     >
+                        <div className='flex items-center justify-between p-3'>
+                            <LikeButton />
+                            <TagLine label='Day Camp' className='!bg-white !text-green-800' />
+                        </div>
                     </div>
                     <div className='px-3 flex flex-col mt-2.5 gap-2'>
                         <div className='flex items-center justify-between'>
@@ -35,24 +41,21 @@ const CampItem = () => {
                         </div>
                         <div className='text-dark-200 text-[10px]'>Outdoor adventures with hiking, swimming, and team building activities.</div>
                         <div className='flex items-center gap-2 mt-1'>
-                            <div className='bg-green-900 text-white text-[10px] font-medium rounded-full px-4 py-1.5'>Adventures</div>
-                            <div className='bg-green-900 text-white text-[10px] font-medium rounded-full px-4 py-1.5'>STEM</div>
-                            <div className='bg-green-900 text-white text-[10px] font-medium rounded-full px-4 py-1.5'>Nature</div>
+                            <TagLine label='Adventures' className='!border-green-900 !font-medium !bg-green-900 !py-1.5' />
+                            <TagLine label='STEM' className='!border-green-900 !font-medium !bg-green-900 !py-1.5' />
+                            <TagLine label='Nature' className='!border-green-900 !font-medium !bg-green-900 !py-1.5' />
                         </div>
                         <div className='flex items-center gap-2 mt-1'>
-                            <div className='border border-green-900 text-green-900 sm:text-[10px] text-[8px] font-semibold rounded-full xl:px-4 px-2 py-1.5'>Age Group: 5-10</div>
-                            <div className='border border-green-900 text-green-900 sm:text-[10px] text-[8px] font-semibold rounded-full xl:px-4 px-2 py-1.5'>Early Bird Discount: 10%</div>
-                            <div className='border border-green-900 text-green-900 sm:text-[10px] text-[8px] font-semibold rounded-full xl:px-4 px-2 py-1.5 flex gap-2'>
-                                <Icon name='point' />
-                                Instant Booking
-                            </div>
+                            <TagLine label='Age Group: 5-10' className='!bg-white !text-green-900 !border-green-900 xl:!text-[10px] !text-[8px] !font-medium !py-1.5' />
+                            <TagLine label='Early Bird Discount: 10%' className='!bg-white !text-green-900 !border-green-900 xl:!text-[10px] !text-[8px] !font-medium !py-1.5' />
+                            <TagLine label='Instant Booking' icon='point' size='11' iconClassName='text-[6px]' className='!bg-white !text-green-900 !border-green-900 xl:!text-[10px] !text-[8px] !font-medium !py-1.5' />
                         </div>
                         <div className='flex items-center justify-between mt-1.5'>
                             <div className='flex items-baseline font-semibold'>
                                 <span className='text-orange-1000 text-2xl'>$300</span>
                                 <span className='text-xs text-dark-200'>/Week</span>
                             </div>
-                            <OrangeButton label='View Details' />
+                            <OrangeLinkButton href={"#"} label='View Details' className='!min-h-[35px] text-xs'/>
                         </div>
                     </div>
                 </div>

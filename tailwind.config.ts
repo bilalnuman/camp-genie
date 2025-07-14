@@ -53,6 +53,7 @@ const config = {
         },
         orange: {
           1000: "#F48403",
+          900:"#E38A28"
         },
         pink: {
           500: "#845EBC"
